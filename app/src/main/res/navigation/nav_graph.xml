@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home2">
+    <action
+        android:id="@+id/app_uninstalled"
+        app:launchSingleTop="true"
+        app:destination="@+id/home2"/>
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.fh.info.ui.fragments.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/apps"
+        android:name="com.fh.info.ui.fragments.Apps"
+        android:label="fragment_apps"
+        tools:layout="@layout/fragment_apps" >
+        <action
+            android:id="@+id/action_apps_to_appInfo"
+            app:destination="@id/appInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/appInfo"
+        android:name="com.fh.info.ui.fragments.AppInfo"
+        android:label="fragment_app_info"
+        tools:layout="@layout/fragment_app_info" >
+        <action
+            android:id="@+id/action_appInfo_to_information"
+            app:destination="@id/information"
+            app:enterAnim="@anim/image_in"
+            app:exitAnim="@anim/image_out" />
+        <action
+            android:id="@+id/action_appInfo_to_storage2"
+            app:destination="@id/storage2"
+            app:popEnterAnim="@anim/image_in"
+            app:popExitAnim="@anim/image_out" />
+        <action
+            android:id="@+id/action_appInfo_to_directories2"
+            app:destination="@id/directories2"
+            app:enterAnim="@anim/image_in"
+            app:popEnterAnim="@anim/image_in"
+            app:popExitAnim="@anim/image_out" />
+        <action
+            android:id="@+id/action_appInfo_to_activities"
+            app:destination="@id/activities" />
+        <argument
+            android:name="applicationInfo"
+            app:argType="com.fh.info.data.model.ApplicationInfoModel" />
+        <action
+            android:id="@+id/action_appInfo_to_certificate"
+            app:destination="@id/certificate" />
+        <action
+            android:id="@+id/action_appInfo_to_dex"
+            app:destination="@id/dex" />
+        <action
+            android:id="@+id/action_appInfo_to_extras2"
+            app:destination="@id/extras2" />
+        <action
+            android:id="@+id/action_appInfo_to_graphics"
+            app:destination="@id/graphics" />
+        <action
+            android:id="@+id/action_appInfo_to_manifestFrag"
+            app:destination="@id/manifestFrag" />
+        <action
+            android:id="@+id/action_appInfo_to_permission"
+            app:destination="@id/permission" />
+        <action
+            android:id="@+id/action_appInfo_to_providers"
+            app:destination="@id/providers" />
+        <action
+            android:id="@+id/action_appInfo_to_resources"
+            app:destination="@id/resources" />
+        <action
+            android:id="@+id/action_appInfo_to_receiver"
+            app:destination="@id/receiver" />
+        <action
+            android:id="@+id/action_appInfo_to_services"
+            app:destination="@id/services" />
+        <action
+            android:id="@+id/action_appInfo_to_usesFeature"
+            app:destination="@id/usesFeature" />
+    </fragment>
+    <fragment
+        android:id="@+id/information"
+        android:name="com.fh.info.ui.fragments.Information"
+        android:label="fragment_information"
+        tools:layout="@layout/fragment_information" >
+        <argument
+            android:name="applicationInfo"
+            app:argType="com.fh.info.data.model.ApplicationInfoModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/storage2"
+        android:name="com.fh.info.ui.fragments.Storage"
+        android:label="fragment_storage"
+        tools:layout="@layout/fragment_storage" >
+        <argument
+            android:name="applicationInfo"
+            app:argType="com.fh.info.data.model.ApplicationInfoModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/directories2"
+        android:name="com.fh.info.ui.fragments.Directories"
+        android:label="fragment_directories"
+        tools:layout="@layout/fragment_directories" >
+        <argument
+            android:name="applicationInfo"
+            app:argType="com.fh.info.data.model.ApplicationInfoModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/activities"
+        android:name="com.fh.info.ui.fragments.Activities"
+        android:label="fragment_activities"
+        tools:layout="@layout/fragment_activities" >
+        <argument
+            android:name="applicationInfo"
+            app:argType="com.fh.info.data.model.ApplicationInfoModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/certificate"
+        android:name="com.fh.info.ui.fragments.Certificate"
+        android:label="fragment_certificate"
+        tools:layout="@layout/fragment_certificate" >
+        <argument
+            android:name="applicationInfo"
+            app:argType="com.fh.info.data.model.ApplicationInfoModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/dex"
+        android:name="com.fh.info.ui.fragments.Dex"
+        android:label="fragment_dex"
+        tools:layout="@layout/fragment_dex" >
+        <argument
+            android:name="applicationinfo"
+            app:argType="com.fh.info.data.model.ApplicationInfoModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/extras2"
+        android:name="com.fh.info.ui.fragments.Extras"
+        android:label="fragment_extras"
+        tools:layout="@layout/fragment_extras" >
+        <argument
+            android:name="applicationInfo"
+            app:argType="com.fh.info.data.model.ApplicationInfoModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/graphics"
+        android:name="com.fh.info.ui.fragments.Graphics"
+        android:label="fragment_graphics"
+        tools:layout="@layout/fragment_graphics" >
+        <argument
+            android:name="applicationInfo"
+            app:argType="com.fh.info.data.model.ApplicationInfoModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/manifestFrag"
+        android:name="com.fh.info.ui.fragments.ManifestFrag"
+        android:label="fragment_manifest"
+        tools:layout="@layout/fragment_manifest" >
+        <argument
+            android:name="applicationinfo"
+            app:argType="com.fh.info.data.model.ApplicationInfoModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/permission"
+        android:name="com.fh.info.ui.fragments.Permission"
+        android:label="fragment_permission"
+        tools:layout="@layout/fragment_permission" >
+        <argument
+            android:name="applicationInfo"
+            app:argType="com.fh.info.data.model.ApplicationInfoModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/providers"
+        android:name="com.fh.info.ui.fragments.Providers"
+        android:label="fragment_providers"
+        tools:layout="@layout/fragment_providers" >
+        <argument
+            android:name="applicationInfo"
+            app:argType="com.fh.info.data.model.ApplicationInfoModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/resources"
+        android:name="com.fh.info.ui.fragments.Resources"
+        android:label="fragment_resources"
+        tools:layout="@layout/fragment_resources" >
+        <argument
+            android:name="applicationInfo"
+            app:argType="com.fh.info.data.model.ApplicationInfoModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/receiver"
+        android:name="com.fh.info.ui.fragments.Receiver"
+        android:label="fragment_receiver"
+        tools:layout="@layout/fragment_receiver" >
+        <argument
+            android:name="applicationInfo"
+            app:argType="com.fh.info.data.model.ApplicationInfoModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/services"
+        android:name="com.fh.info.ui.fragments.Services"
+        android:label="fragment_services"
+        tools:layout="@layout/fragment_services" >
+        <argument
+            android:name="applicationInfo"
+            app:argType="com.fh.info.data.model.ApplicationInfoModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/usesFeature"
+        android:name="com.fh.info.ui.fragments.UsesFeature"
+        android:label="fragment_uses_feature"
+        tools:layout="@layout/fragment_uses_feature" >
+        <argument
+            android:name="applicationinfo"
+            app:argType="com.fh.info.data.model.ApplicationInfoModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/analytics"
+        android:name="com.fh.info.ui.fragments.Analytics"
+        android:label="fragment_analytics"
+        tools:layout="@layout/fragment_analytics" />
+</navigation>

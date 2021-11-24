@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fh.info.decor.ripple.RippleLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:padding="10dp"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    android:focusable="true">
+
+    <ImageView
+        android:layout_gravity="center"
+        tools:src="@drawable/icon_all_apps"
+        android:id="@+id/option_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+         />
+
+    <TextView
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:layout_gravity="center"
+        android:textColor="@color/primaryTextColor"
+        android:layout_marginTop="15dp"
+        tools:text="@string/app_name"
+        android:id="@+id/option_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+       />
+
+</com.fh.info.decor.ripple.RippleLinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fh.info.decor.ripple.RippleConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:focusable="true"
+    android:layout_margin="15dp"
+    android:padding="16dp">
+
+    <ImageView
+        android:background="@drawable/ic_shadow"
+        android:elevation="50dp"
+        android:outlineSpotShadowColor="@color/white"
+        android:outlineAmbientShadowColor="@color/white"
+        tools:src="@drawable/icon_all_apps"
+        android:id="@+id/app_icon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="p" />
+
+    <TextView
+
+        android:ellipsize="end"
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/app_name"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/app_icon"
+        app:layout_constraintTop_toTopOf="@id/app_icon" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/package_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/app_name"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/app_icon"
+        app:layout_constraintTop_toBottomOf="@id/app_name" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/app_size"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/app_name"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/app_icon"
+        app:layout_constraintEnd_toStartOf="@id/app_type"
+        app:layout_constraintStart_toEndOf="@id/app_icon"
+        app:layout_constraintTop_toBottomOf="@id/package_name" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/app_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/app_size"
+        app:layout_constraintStart_toEndOf="@id/app_size"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</com.fh.info.decor.ripple.RippleConstraintLayout>
